@@ -19,7 +19,7 @@ public class ConexaoUtil {
 	public Connection getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
 		
-		return DriverManager.getConnection("jdbc:mysql://localhost:3306/CréditoParaTodxs?useTimezone=true&serverTimezone=America/Sao_Paulo","root","");
+		return DriverManager.getConnection("jdbc:mysql://localhost:3306/créditoParaTodxs?useTimezone=true&serverTimezone=America/Sao_Paulo","root","");
 	}
 	
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Desafio;
+package CreditoParaTodxs;
 import java.util.Scanner;
 
 public class TesteDesafio {
@@ -7,27 +7,27 @@ public class TesteDesafio {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		
-		CréditoParaTodxs crédito=new CréditoParaTodxs();
-		crédito.setFaixaEmprestimo(3000);
+		Emprestimo crédito=new Emprestimo();
+		crédito.setFaixaEmprestimo1(3000);
 		 
-		CréditoParaTodxs crédito1=new CréditoParaTodxs();
-		crédito1.setFaixaEmprestimo(5000);
+		Emprestimo crédito1=new Emprestimo();
+		crédito1.setFaixaEmprestimo2(5000);
 		
-		CréditoParaTodxs crédito2=new CréditoParaTodxs();
-		crédito2.setFaixaEmprestimo(8000);
+		Emprestimo crédito2=new Emprestimo();
+		crédito2.setFaixaEmprestimo3(8000);
 		
 	
-		double montante=crédito.getFaixaEmprestimo() +((crédito.getFaixaEmprestimo()*2.3/100)*6);
-    	double montante1=crédito.getFaixaEmprestimo() +((crédito.getFaixaEmprestimo()*2.6/100)*12);
-    	double montante2=crédito.getFaixaEmprestimo() +((crédito.getFaixaEmprestimo()*2.9/100)*24);
+		double montante=crédito.getFaixaEmprestimo1() +((crédito.getFaixaEmprestimo1()*2.3/100)*6);
+    	double montante1=crédito.getFaixaEmprestimo1() +((crédito.getFaixaEmprestimo1()*2.6/100)*12);
+    	double montante2=crédito.getFaixaEmprestimo1() +((crédito.getFaixaEmprestimo1()*2.9/100)*24);
     	
-    	double montante3=crédito1.getFaixaEmprestimo() +((crédito1.getFaixaEmprestimo()*2.3/100)*6);
-    	double montante4=crédito1.getFaixaEmprestimo() +((crédito1.getFaixaEmprestimo()*2.6/100)*12);
-    	double montante5=crédito1.getFaixaEmprestimo() +((crédito1.getFaixaEmprestimo()*2.9/100)*24);
+    	double montante3=crédito1.getFaixaEmprestimo2() +((crédito1.getFaixaEmprestimo2()*2.3/100)*6);
+    	double montante4=crédito1.getFaixaEmprestimo2() +((crédito1.getFaixaEmprestimo2()*2.6/100)*12);
+    	double montante5=crédito1.getFaixaEmprestimo2() +((crédito1.getFaixaEmprestimo2()*2.9/100)*24);
     	
-    	double montante6=crédito2.getFaixaEmprestimo() +((crédito2.getFaixaEmprestimo()*2.3/100)*6);
-    	double montante7=crédito2.getFaixaEmprestimo() +((crédito2.getFaixaEmprestimo()*2.6/100)*12);
-    	double montante8=crédito2.getFaixaEmprestimo() +((crédito2.getFaixaEmprestimo()*2.9/100)*24);
+    	double montante6=crédito2.getFaixaEmprestimo3() +((crédito2.getFaixaEmprestimo3()*2.3/100)*6);
+    	double montante7=crédito2.getFaixaEmprestimo3() +((crédito2.getFaixaEmprestimo3()*2.6/100)*12);
+    	double montante8=crédito2.getFaixaEmprestimo3() +((crédito2.getFaixaEmprestimo3()*2.9/100)*24);
 		
     	 
     	
@@ -38,8 +38,9 @@ public class TesteDesafio {
 		String nome;
 		int op=0;
 		
-		//acesso ao menu de opções laço while pra rodar o menu
-		while(op <=3) {
+		
+		//acesso ao menu de opções laço while pra rodar o menu 
+		while(op <=1) {
 			System.out.println("Bem vindo ao CréditoParaTodxs -1-Emprestimo 2-sair");
 			op=scan.nextInt();
 			System.out.println("Digite seu nome:");
@@ -56,8 +57,8 @@ public class TesteDesafio {
 			    
 			    // faixa salarial até 2500
 			    if(salario >=1100 && salario<=2500) {
-			    	System.out.println("Você tem disponivel para emprestimo:"
-			    			+ "R$ "+crédito.getFaixaEmprestimo() );
+		   	System.out.println("Você tem disponivel para emprestimo:"
+			    			+ "R$ "+crédito.getFaixaEmprestimo1() );
 			    	System.out.println("informe a quantidade de parcelas");
 			    	parcelas=scan.nextInt();		
 			    	
@@ -71,6 +72,8 @@ public class TesteDesafio {
 			    			 System.out.println("Sr. "+ nome +"\nO(A) Sr(a). contratou: R$ "+ montante + "\nQuantidade de parcelas:"
 			    					 +parcelas + "\nSua parcela mensal é de R$:"+ montante/parcelas +"\nSeu Cpf:"+cpf);
 			    			 System.out.println("****************************");
+			    		 }else {
+			    			 System.out.println("Obrigado por usar nossos serviços"); 
 			    		 }
 			    	}
 			    	if(parcelas==12) {
@@ -84,10 +87,12 @@ public class TesteDesafio {
 			    			System.out.println("Sr. "+ nome +"\nO(A) Sr(a). contratou: R$ "+ montante + "\nQuantidade de parcelas:"
 			    					 +parcelas + "\nSua parcela mensal é de R$:"+ montante/parcelas +"\nSeu Cpf:"+cpf);
 			    			 System.out.println("***************************");
+			    		 }else {
+			    			 System.out.println("Obrigado por usar nossos serviços"); 
 			    		 }
 			    	 }
 			    		
-			    	}
+			    	
 			    	if(parcelas==24) {
 			    		System.out.println("Valor contratado: R$ "+ montante);
 			    		System.out.println("A parcela mensal é de:" + montante/parcelas );
@@ -99,6 +104,8 @@ public class TesteDesafio {
 			    			System.out.println("Sr. "+ nome +"\nO(A) Sr(a). contratou: R$ "+ montante + "\nQuantidade de parcelas:"
 			    					 +parcelas + "\nSua parcela mensal é de R$:"+ montante/parcelas +"\nSeu Cpf:"+cpf);
 			    			 System.out.println("***********************************************************");
+			    		 }else {
+			    			 System.out.println("Obrigado por usar nossos serviços"); 
 			    		 }
 			    	}
 			    }
@@ -109,7 +116,7 @@ public class TesteDesafio {
 			    if(salario >=2501 && salario <=4500 ) {
 			    	
 			    	System.out.println("Você tem disponivel para emprestimo:"
-			    			+ "R$ "+crédito1.getFaixaEmprestimo() );
+			    			+ "R$ "+crédito1.getFaixaEmprestimo2() );
 			    	System.out.println("informe a quantidade de parcelas");
 			    	parcelas=scan.nextInt();
 			    	
@@ -123,6 +130,8 @@ public class TesteDesafio {
 			    			 System.out.println("Sr. "+ nome +"\nO(A) Sr(a). contratou: R$ "+ montante3 + "\nQuantidade de parcelas:"
 			    					 +parcelas + "\nSua parcela mensal é de R$:"+ montante3/parcelas +"\nSeu Cpf:"+cpf);
 			    			 System.out.println("****************************");
+			    		 }else {
+			    			 System.out.println("Obrigado por usar nossos serviços"); 
 			    		 }
 			    	}
 			    	
@@ -137,6 +146,8 @@ public class TesteDesafio {
 			    			System.out.println("Sr. "+ nome +"\nO(A) Sr(a). contratou: R$ "+ montante4 + "\nQuantidade de parcelas:"
 			    					 +parcelas + "\nSua parcela mensal é de R$:"+ montante4/parcelas +"\nSeu Cpf:"+cpf);
 			    			 System.out.println("***************************");
+			    		 }else {
+			    			 System.out.println("Obrigado por usar nossos serviços"); 
 			    		 }
 			    	}
 			    	
@@ -153,6 +164,8 @@ public class TesteDesafio {
 			    			System.out.println("Sr. "+ nome +"\nO(A) Sr(a). contratou: R$ "+ montante5 + "\nQuantidade de parcelas:"
 			    					 +parcelas + "\nSua parcela mensal é de R$:"+ montante5/parcelas +"\nSeu Cpf:"+cpf);
 			    			 System.out.println("****************************");
+			    		 }else {
+			    			 System.out.println("Obrigado por usar nossos serviços"); 
 			    		 }
 			    	}
 			    }
@@ -161,7 +174,7 @@ public class TesteDesafio {
 			    //inicio da faixa salarial acima de 4501- CRÉDITO 8000
 			    if(salario > 4501) {
 			    	System.out.println("Você tem disponivel para emprestimo:"
-			    			+ "R$ "+crédito2.getFaixaEmprestimo() );
+			    			+ "R$ "+crédito2.getFaixaEmprestimo3() );
 			    	System.out.println("informe a quantidade de parcelas");
 			    	parcelas=scan.nextInt();
 			    	
@@ -176,6 +189,8 @@ public class TesteDesafio {
 			    			 System.out.println("Sr. "+ nome +"\nO(A) Sr(a). contratou: R$ "+ montante6 + "\nQuantidade de parcelas:"
 			    					 +parcelas + "\nSua parcela mensal é de R$:"+ montante6/parcelas +"\nSeu Cpf:"+cpf);
 			    			 System.out.println("*****************************");
+			    		 }else {
+			    			 System.out.println("Obrigado por usar nossos serviços"); 
 			    		 }
 			    	}
 			    	if(parcelas==12) {
@@ -190,6 +205,8 @@ public class TesteDesafio {
 			    			System.out.println("Sr. "+ nome +"\nO(A) Sr(a). contratou: R$ "+ montante7 + "\nQuantidade de parcelas:"
 			    					 +parcelas + "\nSua parcela mensal é de R$:"+ montante7/parcelas +"\nSeu Cpf:"+cpf);
 			    			 System.out.println("***************************");
+			    		 }else {
+			    			 System.out.println("Obrigado por usar nossos serviços"); 
 			    		 }
 			    	}
 			    	if(parcelas==24) {
@@ -204,22 +221,23 @@ public class TesteDesafio {
 			    			System.out.println("Sr. "+ nome +"\nO(A) Sr(a). contratou: R$ "+ montante8 + "\nQuantidade de parcelas:"
 			    					 +parcelas + "\nSua parcela mensal é de R$:"+ montante8/parcelas +"\nSeu Cpf:"+cpf);
 			    			 System.out.println("***************************");
+			    		 }else {
+			    			 System.out.println("Obrigado por usar nossos serviços"); 
 			    		 }
-			    	}		
-			    }
-			    if(op==4) {
-			    	//retorno ao menu principal
-			    }
-			    //opção 2 menu emprestimo - cnsulta - sair
-			    if(op==2) { 
-			    	
-			    }
-			  
+			    	}	
+			    	 
+			    }//fim da faixa salarial acima de 4501
+			   
+			   
+			}//fim da op ==1
+			if(op==2) {
+				System.out.println("Obrigado por usar nossos serviços");
 			}
-			System.out.println();
-		}//fim do while op - emprestimo , consulta e sair
+				
+		}//fim do while menu emprestimo, sair
 		
-	}
+	}//fim public static void main(String[] args)
+}//fim class TesteDesafio
 
 
 			
